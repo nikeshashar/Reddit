@@ -7,5 +7,4 @@ describe 'posts' do
 			expect(page).to have_content 'Sign Up'
 		end
 	end
-
 end

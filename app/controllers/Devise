@@ -1,0 +1,12 @@
+Devise
+
+gem 'devise'
+
+bin/rails g devise:install
+
+bin/rails g devise user
+
+bin/rake db:migrate
+
+before_action :authenticate_user!, except: [:index] (in posts controller)
+
