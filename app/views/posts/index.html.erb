@@ -1,5 +1,10 @@
 
-
-No Posts
+<% if @posts.any? %>
+	<% @posts.each do |post| %>
+	<h2><%= post.content %></h2>
+	<% end %>
+<% else %>
+	No Posts
+<% end %> 
 
 <a href='#'>Sign Up</a>

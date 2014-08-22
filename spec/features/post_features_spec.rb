@@ -9,4 +9,14 @@ describe 'posts' do
 			expect(page).to have_content 'Sign Up'
 		end
 	end
+
+	context 'posts have been added' do 
+		before do 
+			post1 = Post.create(content: 'My First Post')
+		end
+		it 'should display them' do
+			visit '/posts'
+			expect(page).to have_content 'My First Post'
+		end
+	end
 end
