@@ -1,10 +1,11 @@
+require 'rails_helper'
+
 describe 'posts' do 
 
-	context 'when logged out' do 
-		it 'should take us to a sign up page' do
+	context 'there are no posts' do 
+		it 'should show no posts' do
 			visit '/posts'
-			click_link 'Add a post'
-			expect(page).to have_content 'Sign Up'
+			expect(page).to have_content 'No Posts'
 		end
 	end
 end
